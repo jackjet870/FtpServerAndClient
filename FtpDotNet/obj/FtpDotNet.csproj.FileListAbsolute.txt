@@ -1,0 +1,6 @@
+C:\Documents and Settings\harve\桌面\FtpDotNet\bin\Debug\FtpDotNet.XML
+C:\Documents and Settings\harve\桌面\FtpDotNet\bin\Debug\FtpDotNet.dll
+C:\Documents and Settings\harve\桌面\FtpDotNet\bin\Debug\FtpDotNet.pdb
+C:\Documents and Settings\harve\桌面\FtpDotNet\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\harve\桌面\FtpDotNet\obj\Debug\FtpDotNet.dll
+C:\Documents and Settings\harve\桌面\FtpDotNet\obj\Debug\FtpDotNet.pdb

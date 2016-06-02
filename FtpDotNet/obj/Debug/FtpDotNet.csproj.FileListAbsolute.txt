@@ -1,0 +1,6 @@
+E:\soft\FtpServerAndClient\FtpDotNet\bin\Debug\FtpDotNet.XML
+E:\soft\FtpServerAndClient\FtpDotNet\bin\Debug\FtpDotNet.dll
+E:\soft\FtpServerAndClient\FtpDotNet\bin\Debug\FtpDotNet.pdb
+E:\soft\FtpServerAndClient\FtpDotNet\obj\Debug\ResolveAssemblyReference.cache
+E:\soft\FtpServerAndClient\FtpDotNet\obj\Debug\FtpDotNet.dll
+E:\soft\FtpServerAndClient\FtpDotNet\obj\Debug\FtpDotNet.pdb

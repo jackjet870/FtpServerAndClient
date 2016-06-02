@@ -1,0 +1,17 @@
+C:\Users\basshari\Downloads\SharpFtpServer (1)\SharpFtpServer\bin\Debug\SharpFtpServer.exe.config
+C:\Users\basshari\Downloads\SharpFtpServer (1)\SharpFtpServer\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\harve\桌面\SharpFtpServer(1)\SharpFtpServer\bin\Debug\SharpFtpServer.exe.config
+C:\Documents and Settings\harve\桌面\SharpFtpServer(1)\SharpFtpServer\bin\Debug\SharpFtpServer.log4net
+C:\Documents and Settings\harve\桌面\SharpFtpServer(1)\SharpFtpServer\bin\Debug\log4net.dll
+C:\Documents and Settings\harve\桌面\SharpFtpServer(1)\SharpFtpServer\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\harve\桌面\SharpFtpServer(1)\SharpFtpServer\obj\x86\Debug\SharpFtpServer.exe
+C:\Documents and Settings\harve\桌面\SharpFtpServer(1)\SharpFtpServer\obj\x86\Debug\SharpFtpServer.pdb
+C:\Documents and Settings\harve\桌面\SharpFtpServer(1)\SharpFtpServer\bin\Debug\SharpFtpServer.exe
+C:\Documents and Settings\harve\桌面\SharpFtpServer(1)\SharpFtpServer\bin\Debug\SharpFtpServer.pdb
+E:\soft\FtpServerAndClient\SharpFtpServer\bin\Debug\SharpFtpServer.exe.config
+E:\soft\FtpServerAndClient\SharpFtpServer\obj\x86\Debug\SharpFtpServer.exe
+E:\soft\FtpServerAndClient\SharpFtpServer\obj\x86\Debug\SharpFtpServer.pdb
+E:\soft\FtpServerAndClient\SharpFtpServer\bin\Debug\SharpFtpServer.log4net
+E:\soft\FtpServerAndClient\SharpFtpServer\bin\Debug\SharpFtpServer.exe
+E:\soft\FtpServerAndClient\SharpFtpServer\bin\Debug\SharpFtpServer.pdb
+E:\soft\FtpServerAndClient\SharpFtpServer\obj\x86\Debug\ResolveAssemblyReference.cache

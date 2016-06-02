@@ -1,0 +1,116 @@
+System.Net Error: 0 : [45252] Exception in the exe
+无上下文策略。
+#12036987::UnhandledExceptionHandler - 使用了与请求的协议不兼容的地址。
+System.Net Error: 0 : [45252]    在 System.Net.Sockets.Socket..ctor(AddressFamily addressFamily, SocketType socketType, ProtocolType protocolType)
+   在 System.Net.Sockets.TcpListener..ctor(IPEndPoint localEP)
+   在 SharpFtpServer.FtpServer.Start() 位置 C:\Documents and Settings\harve\桌面\SharpFtpServer(1)\SharpFtpServer\FtpServer.cs:行号 45
+   在 SharpFtpServer.Program.Main(String[] args) 位置 C:\Documents and Settings\harve\桌面\SharpFtpServer(1)\SharpFtpServer\Program.cs:行号 20
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean ignoreSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+System.Net Information: 0 : [4964] 当前操作系统安装类型为“Client”。
+System.Net Information: 0 : [1372] 当前操作系统安装类型为“Client”。
+System.Net Information: 0 : [9064] 当前操作系统安装类型为“Client”。
+System.Net Information: 0 : [9296] SecureChannel#823098::.ctor(hostname=?124, #clientCertificates=0, encryptionPolicy=RequireEncryption)
+System.Net Information: 0 : [9296] 正在枚举安全包:
+System.Net Information: 0 : [9296]     Negotiate
+System.Net Information: 0 : [9296]     NegoExtender
+System.Net Information: 0 : [9296]     Kerberos
+System.Net Information: 0 : [9296]     NTLM
+System.Net Information: 0 : [9296]     Schannel
+System.Net Information: 0 : [9296]     Microsoft Unified Security Protocol Provider
+System.Net Information: 0 : [9296]     WDigest
+System.Net Information: 0 : [9296]     TSSSP
+System.Net Information: 0 : [9296]     pku2u
+System.Net Information: 0 : [9296]     CREDSSP
+System.Net Information: 0 : [9296] SecureChannel#823098 - 正在为证书 [Subject]
+  CN=TF
+
+[Issuer]
+  CN=TF
+
+[Serial Number]
+  D7B42A4DD3F4A38E49E1F8981C84EAAA
+
+[Not Before]
+  2015-01-01 00:00:00
+
+[Not After]
+  2025-01-01 00:00:00
+
+[Thumbprint]
+  CD020D92AC21A7625D973F06457D6BF912E4FB3F
+ 定位私钥。
+System.Net Information: 0 : [9296] SecureChannel#823098 - 在 LocalMachine 存储区和 CurrentUser 存储区都找不到该证书。
+System.Net Information: 0 : [7440] 当前操作系统安装类型为“Client”。
+System.Net Information: 0 : [8696] SecureChannel#42849418::.ctor(hostname=?124, #clientCertificates=0, encryptionPolicy=RequireEncryption)
+System.Net Information: 0 : [8696] 正在枚举安全包:
+System.Net Information: 0 : [8696]     Negotiate
+System.Net Information: 0 : [8696]     NegoExtender
+System.Net Information: 0 : [8696]     Kerberos
+System.Net Information: 0 : [8696]     NTLM
+System.Net Information: 0 : [8696]     Schannel
+System.Net Information: 0 : [8696]     Microsoft Unified Security Protocol Provider
+System.Net Information: 0 : [8696]     WDigest
+System.Net Information: 0 : [8696]     TSSSP
+System.Net Information: 0 : [8696]     pku2u
+System.Net Information: 0 : [8696]     CREDSSP
+System.Net Information: 0 : [8696] SecureChannel#42849418 - 正在为证书 [Subject]
+  CN=TopFashion
+
+[Issuer]
+  CN=TopFashion
+
+[Serial Number]
+  6B94DBCAD6E45C9746D1656F71EC94C2
+
+[Not Before]
+  2015-01-01 00:00:00
+
+[Not After]
+  2025-01-01 00:00:00
+
+[Thumbprint]
+  A0CDCE17C1D0EC60B67EB167293FF2FAF9B370D9
+ 定位私钥。
+System.Net Information: 0 : [8696] SecureChannel#42849418 - 在 LocalMachine 存储区和 CurrentUser 存储区都找不到该证书。
+System.Net Information: 0 : [8300] 当前操作系统安装类型为“Client”。
+System.Net Information: 0 : [9168] 当前操作系统安装类型为“Client”。
+System.Net Information: 0 : [9368] 当前操作系统安装类型为“Client”。
+System.Net Information: 0 : [1492] SecureChannel#65458250::.ctor(hostname=?124, #clientCertificates=0, encryptionPolicy=RequireEncryption)
+System.Net Information: 0 : [1492] 正在枚举安全包:
+System.Net Information: 0 : [1492]     Negotiate
+System.Net Information: 0 : [1492]     NegoExtender
+System.Net Information: 0 : [1492]     Kerberos
+System.Net Information: 0 : [1492]     NTLM
+System.Net Information: 0 : [1492]     Schannel
+System.Net Information: 0 : [1492]     Microsoft Unified Security Protocol Provider
+System.Net Information: 0 : [1492]     WDigest
+System.Net Information: 0 : [1492]     TSSSP
+System.Net Information: 0 : [1492]     pku2u
+System.Net Information: 0 : [1492]     CREDSSP
+System.Net Information: 0 : [1492] SecureChannel#65458250 - 正在为证书 [Subject]
+  CN=TopFashion
+
+[Issuer]
+  CN=TopFashion
+
+[Serial Number]
+  6B94DBCAD6E45C9746D1656F71EC94C2
+
+[Not Before]
+  2015-01-01 00:00:00
+
+[Not After]
+  2025-01-01 00:00:00
+
+[Thumbprint]
+  A0CDCE17C1D0EC60B67EB167293FF2FAF9B370D9
+ 定位私钥。
+System.Net Information: 0 : [1492] SecureChannel#65458250 - 在 LocalMachine 存储区和 CurrentUser 存储区都找不到该证书。
+System.Net Information: 0 : [1956] 当前操作系统安装类型为“Client”。
+System.Net Information: 0 : [5132] 当前操作系统安装类型为“Client”。

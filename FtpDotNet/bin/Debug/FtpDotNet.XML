@@ -1,0 +1,445 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FtpDotNet</name>
+    </assembly>
+    <members>
+        <member name="T:FtpDotNet.FtpConnectionEventHandler">
+            <summary>
+            The delegate to be used in conjuction with the FtpConnectionEventArgs class
+            </summary>
+        </member>
+        <member name="T:FtpDotNet.FtpConnectionEventArgs">
+            <summary>
+            Provides data for the <see cref="E:FtpDotNet.FtpConnection.MessageReceived">MessageReceived event</see>
+            </summary>
+        </member>
+        <member name="M:FtpDotNet.FtpConnectionEventArgs.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FtpDotNet.FtpConnectionEventArgs"/>
+            </summary>
+            <param name="message">The status message to be sendt</param>
+        </member>
+        <member name="P:FtpDotNet.FtpConnectionEventArgs.Message">
+            <summary>
+            Contains status messages from the <see cref="T:FtpDotNet.FtpConnection"/> class during operations
+            </summary>
+        </member>
+        <member name="T:FtpDotNet.FtpConnection">
+            <summary>
+            Provides easy access to common operations against FTP servers
+            </summary>    
+        </member>
+        <member name="F:FtpDotNet.FtpConnection.mUserName">
+            <summary>
+            The username used to connect to the FTP server
+            </summary>
+        </member>
+        <member name="F:FtpDotNet.FtpConnection.mPassword">
+            <summary>
+            The password used to connect to the FTP server
+            </summary>        
+        </member>
+        <member name="F:FtpDotNet.FtpConnection.mUseBinaryMode">
+            <summary>
+            Determines if transfers should be performed using binary mode Default (true)
+            </summary>
+        </member>
+        <member name="F:FtpDotNet.FtpConnection.mHost">
+            <summary>
+            The DNS or IP address to the FTP server 
+            </summary>
+        </member>
+        <member name="F:FtpDotNet.FtpConnection.mPort">
+            <summary>
+            The portnumber for the FTP server
+            </summary>
+        </member>
+        <member name="F:FtpDotNet.FtpConnection.mRemoteDirectory">
+            <summary>
+            The remote directory on the FTP server
+            </summary>
+        </member>
+        <member name="F:FtpDotNet.FtpConnection.mLocalDirectory">
+            <summary>
+            Local directory to be used when uploading and downloading files
+            </summary>
+        </member>
+        <member name="F:FtpDotNet.FtpConnection.mTimeOut">
+            <summary>
+            The number of milliseconds to wait before a request to the FTP server times out (Default Infinite(-1))
+            </summary>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:FtpDotNet.FtpConnection"/> class
+            </summary>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.#ctor(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FtpDotNet.FtpConnection"/> class
+            </summary>
+            <param name="host">The DNS or IP address to the FTP server</param>
+            <param name="port">The portnumber for the FTP server</param>
+            <param name="userName">The username used to connect to the FTP server</param>
+            <param name="password">The password used to connect to the FTP server</param>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.CreateWebRequest(System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:System.Net.FtpWebRequest"/>
+            </summary>
+            <param name="method">The <see cref="P:System.Net.FtpWebRequest.Method"/></param>
+            <param name="uri">The uri string for the request</param>
+            <returns><see cref="T:System.Net.FtpWebRequest"/></returns>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.OnMessageReceived(System.String)">
+            <summary>
+            Sends a message to the listeners of the <see cref="E:FtpDotNet.FtpConnection.MessageReceived"/> event
+            </summary>
+            <param name="message">The message to send</param>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.GetLocalDirectoryName">
+            <summary>
+            Gets the name of the local directory
+            </summary>
+            <returns>directory name</returns>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.HandleException(System.Net.WebException)">
+            <summary>
+            Formats a <see cref="T:System.Net.WebException"/> as a message back to the event listener
+            </summary>
+            <param name="ex">The exeption to format</param>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.IsPathRelative(System.String)">
+            <summary>
+            Checks to see if the configured logpath is releative or absolute
+            </summary>
+            <returns>True if the path is relative, otherwise false</returns>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.GetExecutingAssemblyPath">
+            <summary>
+            Returns the location of the excuting assembly
+            </summary>
+            <returns>The local operation system representation of the executing assembly location</returns>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.Upload(System.String)">
+             <overloads>
+             <summary>
+             Uploads a file to the FTP Server
+             </summary>                
+             <example>
+             The following example uploads a file to a FTP server     
+            <code>
+             try
+             {
+                 FtpConnection connection = new FtpConnection();
+                 connection.MessageReceived += new FtpConnectionEventHandler(connection_MessageReceived);
+                 connection.Host = "ftp://ftp.myserver.com";
+                 connection.UserName = "username";
+                 connection.Password = "password";
+                 connection.RemoteDirectory = "/MyDirectory";
+                 connection.Upload(@"C:\Temp\House.jpg", "House.jpg");
+             }
+             catch (WebException ex)
+             {
+                 Console.WriteLine(ex.ToString());
+             }
+             catch (Exception ex)
+             {
+                 Console.WriteLine(ex.ToString());
+             }
+            </code>
+            </example>
+            </overloads>
+             <param name="fileName">The name of the file to upload</param>        
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.Upload(System.String,System.String)">
+            <param name="fileName">The name of the file to upload</param>
+            <param name="remoteFileName">The name of the destination file</param>        
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.Download(System.String)">
+             <overloads>
+             <summary>
+             Downloads a file from the FTP server
+             </summary>                
+             <example>
+             The following example downloads a file from a FTP server     
+            <code>
+             try
+             {
+                 FtpConnection connection = new FtpConnection();
+                 connection.MessageReceived += new FtpConnectionEventHandler(connection_MessageReceived);
+                 connection.Host = "ftp://ftp.myserver.com";
+                 connection.UserName = "username";
+                 connection.Password = "password";
+                 connection.RemoteDirectory = "/MyDirectory";
+                 connection.Download("House.jpg",@"C:\Temp\House.jpg");
+             }
+             catch (WebException ex)
+             {
+                 Console.WriteLine(ex.ToString());
+             }
+             catch (Exception ex)
+             {
+                 Console.WriteLine(ex.ToString());
+             }
+            </code>
+            </example>
+            </overloads>
+             <param name="fileName">The name of the remote file to download</param>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.Download(System.String,System.String)">
+            <param name="fileName">The name of the remote file to download</param>
+            <param name="localFileName">The name of the local file to be created</param>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.DownloadFiles">
+             <overloads>
+             <summary>
+             Downloads multible files from the FTP server 
+             </summary>
+             <example>
+             The following example downloads all jpg files from a FTP server     
+            <code>
+             try
+             {
+                 FtpConnection connection = new FtpConnection();
+                 connection.MessageReceived += new FtpConnectionEventHandler(connection_MessageReceived);
+                 connection.Host = "ftp://ftp.myserver.com";
+                 connection.UserName = "username";
+                 connection.Password = "password";
+                 connection.RemoteDirectory = "/MyDirectory";
+                 connection.DownloadFiles("*.jpg");
+             }
+             catch (WebException ex)
+             {
+                 Console.WriteLine(ex.ToString());
+             }
+             catch (Exception ex)
+             {
+                 Console.WriteLine(ex.ToString());
+             }
+            </code>
+            </example>
+             </overloads>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.DownloadFiles(System.String)">
+            <param name="filter">The filter to apply when downloading files (ex *.txt)</param>    
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.ListDirectory">
+            <overloads>
+            <summary>
+            Lists the contents of the <seealso cref="P:FtpDotNet.FtpConnection.RemoteDirectory"/>
+            </summary>
+            <returns>A list of files in the <seealso cref="P:FtpDotNet.FtpConnection.RemoteDirectory"/></returns>
+            <example>
+            The following example lists all jpg files on a FTP server     
+            <code>
+            <![CDATA[
+            try
+            {
+                FtpConnection connection = new FtpConnection();
+                connection.MessageReceived += new FtpConnectionEventHandler(connection_MessageReceived);
+                connection.Host = "ftp://ftp.myserver.com";
+                connection.UserName = "username";
+                connection.Password = "password";
+                connection.RemoteDirectory = "/MyDirectory";
+                List<string> files = connection.ListDirectory(*.jpg);
+                foreach (string file in files)
+                {
+                    Console.WriteLine(File);
+                }
+            }
+            catch (WebException ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            ]]>
+            </code>
+            </example>
+            </overloads>        
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.ListDirectory(System.String)">
+            <param name="filter">The filter to apply when listing files (ex *.txt)</param>        
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.DeleteFile(System.String)">
+             <summary>
+             Deletes a file from the FTP server
+             </summary>
+             <param name="fileName">The name of the file to delete</param>
+             <example>
+             The following example deletes a file from a FTP server     
+            <code>
+             try
+             {
+                 FtpConnection connection = new FtpConnection();
+                 connection.MessageReceived += new FtpConnectionEventHandler(connection_MessageReceived);
+                 connection.Host = "ftp://ftp.myserver.com";
+                 connection.UserName = "username";
+                 connection.Password = "password";
+                 connection.RemoteDirectory = "/MyDirectory";
+                 connection.DeleteFile("House.jpg");
+             }
+             catch (WebException ex)
+             {
+                 Console.WriteLine(ex.ToString());
+             }
+             catch (Exception ex)
+             {
+                 Console.WriteLine(ex.ToString());
+             }
+            </code>
+            </example>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.GetFileSize(System.String)">
+             <summary>
+             Gets the size of a file on the FTP server
+             </summary>
+             <param name="fileName">The name of the remote file</param>
+             <returns>The size of the file in bytes</returns> 
+             <example>
+             The following example gets the size of a file on a FTP server
+            <code>
+             try
+             {
+                 FtpConnection connection = new FtpConnection();
+                 connection.MessageReceived += new FtpConnectionEventHandler(connection_MessageReceived);
+                 connection.Host = "ftp://ftp.myserver.com";
+                 connection.UserName = "username";
+                 connection.Password = "password";
+                 connection.RemoteDirectory = "/MyDirectory";
+                 Console.WriteLine(connection.GetFileSize("House.jpg").ToString());
+             }
+             catch (WebException ex)
+             {
+                 Console.WriteLine(ex.ToString());
+             }
+             catch (Exception ex)
+             {
+                 Console.WriteLine(ex.ToString());
+             }
+            </code>
+            </example>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.GetFileTimeStamp(System.String)">
+             <summary>
+             Gets a timestamp indicating what time the remote file was modified
+             </summary>
+             <param name="fileName">The name of the remote file</param>
+             <returns>The date and time for when the file was last modified</returns> 
+             <example>
+             The following example gets the timestamp of a file on a FTP server
+            <code>
+             try
+             {
+                 FtpConnection connection = new FtpConnection();
+                 connection.MessageReceived += new FtpConnectionEventHandler(connection_MessageReceived);
+                 connection.Host = "ftp://ftp.myserver.com";
+                 connection.UserName = "username";
+                 connection.Password = "password";
+                 connection.RemoteDirectory = "/MyDirectory";
+                 Console.WriteLine(connection.GetFileTimeStamp("House.jpg").ToString());
+             }
+             catch (WebException ex)
+             {
+                 Console.WriteLine(ex.ToString());
+             }
+             catch (Exception ex)
+             {
+                 Console.WriteLine(ex.ToString());
+             }
+            </code>
+            </example>
+        </member>
+        <member name="M:FtpDotNet.FtpConnection.MakeDirectory(System.String)">
+             <summary>
+             Creates a new directory on the FTP Server
+             </summary>
+             <param name="directoryName">The name of the directory to create</param>
+             <example>
+             The following example creates a new directory on a FTP server
+            <code>
+             try
+             {
+                 FtpConnection connection = new FtpConnection();
+                 connection.MessageReceived += new FtpConnectionEventHandler(connection_MessageReceived);
+                 connection.Host = "ftp://ftp.myserver.com";
+                 connection.UserName = "username";
+                 connection.Password = "password";
+                 connection.RemoteDirectory = "/MyDirectory";
+                 connection.MakeDirectory("MyNewDirectory");
+             }
+             catch (WebException ex)
+             {
+                 Console.WriteLine(ex.ToString());
+             }
+             catch (Exception ex)
+             {
+                 Console.WriteLine(ex.ToString());
+             }
+            </code>
+            </example>
+        </member>
+        <member name="E:FtpDotNet.FtpConnection.MessageReceived">
+            <summary>
+            Receives status messages from the <see cref="T:FtpDotNet.FtpConnection"/> during operations
+            </summary>
+            <example>
+            This example sets up an event handler for the MessageReceived event.
+            <code>
+            void connection_MessageReceived(object sender, FtpConnectionEventArgs e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            </code>
+            </example>
+        </member>
+        <member name="P:FtpDotNet.FtpConnection.Port">
+            <summary>
+            Sets/Gets portnumber for the FTP server
+            </summary>
+        </member>
+        <member name="P:FtpDotNet.FtpConnection.TimeOut">
+            <summary>
+            Sets/Gets number of milliseconds to wait before a request to the FTP server times out (Default Infinite(-1))
+            </summary>
+        </member>
+        <member name="P:FtpDotNet.FtpConnection.LocalDirectory">
+            <summary>
+            Sets/Gets the directory to be used when uploading and downloading files
+            </summary>
+            <remarks>
+            If the local directory is not supplied, upload and download will operate
+            on the execting assembly path.
+            </remarks>
+        </member>
+        <member name="P:FtpDotNet.FtpConnection.RemoteDirectory">
+            <summary>
+            Sets/Gets the remote directory on the FTP server
+            </summary>       
+        </member>
+        <member name="P:FtpDotNet.FtpConnection.Host">
+            <summary>
+            Sets/Gets the DNS or IP address to the FTP server (ex ftp://myftpserver.com)
+            </summary>
+        </member>
+        <member name="P:FtpDotNet.FtpConnection.UseBinaryMode">
+            <summary>
+            Sets/Gets if transfers should be performed using binary mode Default (true) 
+            </summary>
+        </member>
+        <member name="P:FtpDotNet.FtpConnection.Password">
+            <summary>
+            Sets/Gets the password used to connect to the FTP server
+            </summary>
+        </member>
+        <member name="P:FtpDotNet.FtpConnection.UserName">
+            <summary>
+            Sets/Gets the username used to connect to the FTP server
+            </summary>
+        </member>
+    </members>
+</doc>

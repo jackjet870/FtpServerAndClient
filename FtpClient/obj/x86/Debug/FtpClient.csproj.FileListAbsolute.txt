@@ -1,0 +1,27 @@
+C:\Documents and Settings\harve\桌面\FtpClient\bin\Debug\FtpClient.exe
+C:\Documents and Settings\harve\桌面\FtpClient\bin\Debug\FtpClient.pdb
+C:\Documents and Settings\harve\桌面\FtpClient\bin\Debug\FtpDotNet.dll
+C:\Documents and Settings\harve\桌面\FtpClient\bin\Debug\FtpDotNet.pdb
+C:\Documents and Settings\harve\桌面\FtpClient\bin\Debug\FtpDotNet.xml
+C:\Documents and Settings\harve\桌面\FtpClient\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\harve\桌面\FtpClient\obj\x86\Debug\FtpClient.Form1.resources
+C:\Documents and Settings\harve\桌面\FtpClient\obj\x86\Debug\FtpClient.Properties.Resources.resources
+C:\Documents and Settings\harve\桌面\FtpClient\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Documents and Settings\harve\桌面\FtpClient\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Documents and Settings\harve\桌面\FtpClient\obj\x86\Debug\FtpClient.exe
+C:\Documents and Settings\harve\桌面\FtpClient\obj\x86\Debug\FtpClient.pdb
+C:\Documents and Settings\harve\桌面\FtpClient\bin\Debug\System.Net.FtpClient.dll
+E:\soft\FtpServerAndClient\FtpClient\obj\x86\Debug\FtpClient.exe
+E:\soft\FtpServerAndClient\FtpClient\obj\x86\Debug\FtpClient.pdb
+E:\soft\FtpServerAndClient\FtpClient\bin\Debug\FtpClient.exe
+E:\soft\FtpServerAndClient\FtpClient\bin\Debug\FtpClient.pdb
+E:\soft\FtpServerAndClient\FtpClient\bin\Debug\FtpDotNet.dll
+E:\soft\FtpServerAndClient\FtpClient\bin\Debug\FtpDotNet.pdb
+E:\soft\FtpServerAndClient\FtpClient\bin\Debug\FtpDotNet.xml
+E:\soft\FtpServerAndClient\FtpClient\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\soft\FtpServerAndClient\FtpClient\obj\x86\Debug\FtpClient.Form1.resources
+E:\soft\FtpServerAndClient\FtpClient\obj\x86\Debug\FtpClient.Properties.Resources.resources
+E:\soft\FtpServerAndClient\FtpClient\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+E:\soft\FtpServerAndClient\FtpClient\obj\x86\Debug\ResGen.read.1.tlog
+E:\soft\FtpServerAndClient\FtpClient\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+E:\soft\FtpServerAndClient\FtpClient\obj\x86\Debug\ResGen.write.1.tlog

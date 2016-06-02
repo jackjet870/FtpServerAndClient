@@ -1,0 +1,12 @@
+bin\Release\FtpDotNet.XML
+bin\Release\FtpDotNet.dll
+bin\Release\FtpDotNet.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\FtpDotNet.dll
+obj\Release\FtpDotNet.pdb
+bin\Debug\FtpDotNet.XML
+bin\Debug\FtpDotNet.dll
+bin\Debug\FtpDotNet.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\FtpDotNet.dll
+obj\Debug\FtpDotNet.pdb
